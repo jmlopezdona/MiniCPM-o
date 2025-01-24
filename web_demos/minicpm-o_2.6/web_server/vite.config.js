@@ -65,12 +65,12 @@ export default defineConfig({
         port: 8088,
         proxy: {
             '/api/v1': {
-                target: 'http://127.0.0.1:32550',
+                target: 'http://host.docker.internal:32550',
                 ws: true,
                 changeOrigin: true
             },
             '/ws': {
-                target: 'http://127.0.0.1:32550',
+                target: 'http://host.docker.internal:32550',
                 ws: true,
                 changeOrigin: true
             }
